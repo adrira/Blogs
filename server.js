@@ -18,7 +18,7 @@ app.use("/auth", auth);
 const blog = require("./server/routes/blog");
 app.use("/blog", blog);
 
-app.use('/files',express.static(__dirname + '/uploads'));
+// app.use('/files',express.static(__dirname + '/uploads'));
 
 app.use(express.static(__dirname + '/dist/blogs-projet'))
 
