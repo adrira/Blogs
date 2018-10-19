@@ -20,7 +20,13 @@ app.use("/blog", blog);
 
 app.use('/files',express.static(__dirname + '/uploads'));
 
+app.use(express.static(__dirname + '/dist/blogs-projet'))
+
+app.get('**', (req,res)=>{
+  res.sendFile(__dirname + "/dist/blogs-projet/index.html")
+})
+
 app.listen(3014, err => {
     if (err) throw err;
-    console.log("hani nasma3 fik 3al 3000");
+    console.log("hani nasma3 fik 3al 3014");
 });
