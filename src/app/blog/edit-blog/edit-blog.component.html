@@ -1,0 +1,19 @@
+<app-menu></app-menu>
+
+<div class="container">
+  <form [formGroup]="blogForm">
+    <div class="form-group">
+      <label class="col-md-3 control-label" for="titre">Titre</label>
+      <input type="text" name="titre" formControlName="titre" [value]="blog?.titre" />
+    </div>
+    <!--<div class="form-group">
+        <label class="col-md-3 control-label" for="name">Image</label>
+    </div>-->
+    <label class="control-label" for="description">Description</label>
+    <app-ngx-editor [placeholder]="'Enter text here...'" [minHeight]="500" [spellcheck]="true"
+      formControlName="description"></app-ngx-editor>
+    <div class="col-md-12 text-center">
+      <button class="btn btn-blog mt-3" (click)="saveBlog()">Enregistrer</button>
+    </div>
+  </form>
+</div>
